@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+const appInsights = require('applicationinsights');
+appInsights.setup('7b96d0ae-9a63-4458-bf42-51d4621805f7').start();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
